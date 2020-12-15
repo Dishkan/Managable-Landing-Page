@@ -15,7 +15,7 @@ class PortfolioEditController extends Controller
 		
 		if($request->isMethod('delete')) {
 			$portfolio->delete();
-			return redirect('admin')->with('status','Портфолио удалена');
+			return redirect('boss')->with('status','Портфолио удалена');
 		}
 		
 		
@@ -58,7 +58,7 @@ class PortfolioEditController extends Controller
 			$portfolio->fill($input);
 			
 			if($portfolio->update()) {
-				return redirect('admin')->with('status','Портфолио обновлено');
+				return redirect('boss')->with('status','Портфолио обновлено');
 			}
 			
 		}
