@@ -51,7 +51,7 @@ class PortfolioAddController extends Controller
 			$portfolio->fill($input);
 			
 			if($portfolio->save()) {
-				return redirect('admin')->with('status','Портфолио добавлена');
+				return redirect('boss')->with('status','Портфолио добавлена');
 			}
 		}
     	
