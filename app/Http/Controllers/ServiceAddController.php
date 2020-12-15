@@ -42,7 +42,7 @@ class ServiceAddController extends Controller
 			$service->fill($input);
 			
 			if($service->save()) {
-				return redirect('admin')->with('status','Сервис добавлен');
+				return redirect('boss')->with('status','Сервис добавлен');
 			}
 			
 		}
