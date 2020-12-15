@@ -15,7 +15,7 @@ class ServiceEditController extends Controller
 		
 		if($request->isMethod('delete')) {
 			$service->delete();
-			return redirect('admin')->with('status','Сервис удален');
+			return redirect('boss')->with('status','Сервис удален');
 		}
 		
 		
@@ -47,7 +47,7 @@ class ServiceEditController extends Controller
 			$service->fill($input);
 			
 			if($service->update()) {
-				return redirect('admin')->with('status',' Сервис обновлен');
+				return redirect('boss')->with('status',' Сервис обновлен');
 			}
 			
 		}
