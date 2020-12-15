@@ -15,7 +15,7 @@ class PagesEditController extends Controller
 		
 		if($request->isMethod('delete')) {
 			$page->delete();
-			return redirect('admin')->with('status','Страница удалена');
+			return redirect('boss')->with('status','Страница удалена');
 		}
 		
 		
@@ -59,7 +59,7 @@ class PagesEditController extends Controller
 			$page->fill($input);
 			
 			if($page->update()) {
-				return redirect('admin')->with('status','Страница обновлена');
+				return redirect('boss')->with('status','Страница обновлена');
 			}
 			
 		}
